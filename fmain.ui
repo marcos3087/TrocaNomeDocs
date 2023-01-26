@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>principal</class>
+ <widget class="QMainWindow" name="principal">
+  <property name="windowModality">
+   <enum>Qt::ApplicationModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>505</width>
+    <height>603</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Altera nome de cupom Fiscal</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>40</y>
+      <width>471</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-color: rgb(0, 0, 0);</string>
+    </property>
+    <property name="title">
+     <string>Local dos arquivos</string>
+    </property>
+    <widget class="QLineEdit" name="txtCamArq">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>411</width>
+       <height>20</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btSelCam">
+     <property name="geometry">
+      <rect>
+       <x>430</x>
+       <y>20</y>
+       <width>31</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>diretorio.png</normaloff>diretorio.png</iconset>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>100</y>
+      <width>111</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Arquivos Encontrados</string>
+    </property>
+   </widget>
+   <widget class="QListWidget" name="lstEncontrado">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>120</y>
+      <width>201</width>
+      <height>401</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QListWidget" name="lstResultados">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>120</y>
+      <width>211</width>
+      <height>401</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>100</y>
+      <width>111</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Resultados</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btTrocaNome">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>530</y>
+      <width>81</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Trocar nomes</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btConfig">
+    <property name="geometry">
+     <rect>
+      <x>460</x>
+      <y>10</y>
+      <width>31</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Configuração</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>config.png</normaloff>config.png</iconset>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>520</y>
+      <width>31</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Total:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lblTotalEncontrado">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>520</y>
+      <width>121</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>520</y>
+      <width>71</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Total alterado:</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>540</y>
+      <width>71</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="text">
+     <string>Total erro:</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lblTotalAlterado">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>520</y>
+      <width>71</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lblTotalErro">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>540</y>
+      <width>71</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>505</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="mnuArquivo">
+    <property name="title">
+     <string>Arquivo</string>
+    </property>
+    <addaction name="separator"/>
+    <addaction name="mnuConfiguracao"/>
+    <addaction name="mnuSair"/>
+   </widget>
+   <addaction name="mnuArquivo"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="mnuSair">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Sair</string>
+   </property>
+  </action>
+  <action name="mnuCadPh">
+   <property name="text">
+    <string>PH</string>
+   </property>
+  </action>
+  <action name="mnuCadMO">
+   <property name="text">
+    <string>M.O.</string>
+   </property>
+  </action>
+  <action name="mnuCadParametros">
+   <property name="text">
+    <string>Parâmetros</string>
+   </property>
+  </action>
+  <action name="mnuExportaResultado">
+   <property name="text">
+    <string>Exportação de resultados</string>
+   </property>
+  </action>
+  <action name="mnuAnaSolocitacaoSolo">
+   <property name="text">
+    <string>Solicitação de análise</string>
+   </property>
+  </action>
+  <action name="mnuAnaResultadoSolo">
+   <property name="text">
+    <string>Resultado de análise</string>
+   </property>
+  </action>
+  <action name="mnuAnaImpResultadoSolo">
+   <property name="text">
+    <string>Impressão de resultado</string>
+   </property>
+  </action>
+  <action name="mnuAnaCalcFatoresSolo">
+   <property name="text">
+    <string>Cálculo de fatores</string>
+   </property>
+  </action>
+  <action name="mnuAnaPesqSolo">
+   <property name="text">
+    <string>Pesquisa de Análises</string>
+   </property>
+  </action>
+  <action name="mnuAnaAlteraProtSolo">
+   <property name="text">
+    <string>Alteração de cadastro de protocolo</string>
+   </property>
+  </action>
+  <action name="mnuAnaSolicitacaoFolha">
+   <property name="text">
+    <string>Solicitação de análise</string>
+   </property>
+  </action>
+  <action name="mnuAnaResultadoFolha">
+   <property name="text">
+    <string>Resultado de análise</string>
+   </property>
+  </action>
+  <action name="mnuAnaImprResultadoFolha">
+   <property name="text">
+    <string>Impressão de resultado</string>
+   </property>
+  </action>
+  <action name="mnuAnaCalcFatoresFolha">
+   <property name="text">
+    <string>Cáculo dos fatores</string>
+   </property>
+  </action>
+  <action name="mnuAnaPesqFolha">
+   <property name="text">
+    <string>Pesquisa de análises</string>
+   </property>
+  </action>
+  <action name="mnuAnaAlteraProtFolha">
+   <property name="text">
+    <string>Alteração de cadastro de protocolos</string>
+   </property>
+  </action>
+  <action name="mnuAnaSolicitacaoTextura">
+   <property name="text">
+    <string>Solicitação de análise</string>
+   </property>
+  </action>
+  <action name="mnuAnaResultadoTextura">
+   <property name="text">
+    <string>Resultado de análise</string>
+   </property>
+  </action>
+  <action name="mnuAnaImpResultadoTextura">
+   <property name="text">
+    <string>Impressão de resultado</string>
+   </property>
+  </action>
+  <action name="mnuAnaPesqTextura">
+   <property name="text">
+    <string>Pesquisa análise</string>
+   </property>
+  </action>
+  <action name="mnuAnaAlteraProtTextura">
+   <property name="text">
+    <string>Alteração de cadastro de protocolos</string>
+   </property>
+  </action>
+  <action name="mnuRelAnaSolos">
+   <property name="text">
+    <string>Extrato de análise de solos</string>
+   </property>
+  </action>
+  <action name="mnuPlanilhaSolosCom">
+   <property name="text">
+    <string>Planilha de leitura - Completa</string>
+   </property>
+  </action>
+  <action name="mnuPlanilhaSolosParcial">
+   <property name="text">
+    <string>Planilha de leitura - Parcial</string>
+   </property>
+  </action>
+  <action name="mnuRelEntregaSolos">
+   <property name="text">
+    <string>Entrega de Resultados</string>
+   </property>
+  </action>
+  <action name="mnuPlanilhaSolos">
+   <property name="text">
+    <string>Planilha de leitura</string>
+   </property>
+  </action>
+  <action name="mnuExtratoAnaFolha">
+   <property name="text">
+    <string>Extrato de análise de folhas</string>
+   </property>
+  </action>
+  <action name="mnuPlanilhaFolhaCom">
+   <property name="text">
+    <string>Planilha de leitura de folhas</string>
+   </property>
+  </action>
+  <action name="mnuRelEntregaFolha">
+   <property name="text">
+    <string>Entrega de resultados</string>
+   </property>
+  </action>
+  <action name="mnuEtiqueta">
+   <property name="text">
+    <string>Etiqueta</string>
+   </property>
+  </action>
+  <action name="mnuPermissoesAcesso">
+   <property name="text">
+    <string>Permissão de acesso</string>
+   </property>
+  </action>
+  <action name="mnuSobre">
+   <property name="text">
+    <string>Sobre</string>
+   </property>
+  </action>
+  <action name="mnuCadAbsorbancia">
+   <property name="text">
+    <string>Abserobância</string>
+   </property>
+  </action>
+  <action name="mnuCadRemetentes">
+   <property name="text">
+    <string>Remetentes</string>
+   </property>
+  </action>
+  <action name="mnuAnaLiberaSolo">
+   <property name="text">
+    <string>Liberar análises</string>
+   </property>
+  </action>
+  <action name="mnuAnaLiberaFolha">
+   <property name="text">
+    <string>Liberar análises</string>
+   </property>
+  </action>
+  <action name="mnuAnaLiberaTextura">
+   <property name="text">
+    <string>Liberar análises</string>
+   </property>
+  </action>
+  <action name="mnuFechamentoAnaSol">
+   <property name="text">
+    <string>Fechamento de análises (Cáculo de bases)</string>
+   </property>
+  </action>
+  <action name="mnuConfiguracao">
+   <property name="text">
+    <string>Configuração</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
